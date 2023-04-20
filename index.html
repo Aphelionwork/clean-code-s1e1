@@ -5,24 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type='text/css'>
     <link rel="stylesheet" href="style.css" MEDIA="screen" charset="utf-8">
   </head>
   <body>
-    <div class="aaa">
+
+    <header class="header">
       <img src="./eisenhower-matrix.jpg" alt="Visual illustration of Eisenhower matrix">
       <a class="more_inf" href="https://goal-life.com/page/method/matrix-eisenhower">
           Want more details?</a>
-    </div>
-    <div class="centered-main-page-element">
-      <p id="topSectionForAddingElementToList">
-        <label for="new-task">Add Item</label>
-        <div class="task-row-wrapper">
-          <input id="new-task"class="task" type="text">
-          <button>Add</button>
-        </div>
-      </p>
-      <h3>Todo</h3>
+    </header>
+
+    <main class="main">
+      <section class="section_add">
+        <h3>Add Item</h3>
+          <div class="task-row-wrapper">
+            <input id="new-task"class="task" type="text">
+            <button>Add</button>
+          </div>
+      </section>
+
+      <section class="section_todo">
+        <h3>Todo</h3>
         <ul id="incompleteTasks">
           <li>
             <input type="checkbox">
@@ -43,7 +47,10 @@
             </button>
           </li>
         </ul>
-      <h3>Completed</h3>
+      </section>
+
+      <section class="section_complete">
+        <h3>Completed</h3>
         <ul id="completed-tasks">
           <li>
             <input type="checkbox" checked>
@@ -55,7 +62,9 @@
             </button>
           </li>
         </ul>
-    </div>
-    <script src="app.js"></script> 
+      </section>
+
+    </main>
+    <script src="app.js"></script>
   </body>
 </html>
