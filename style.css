@@ -1,30 +1,32 @@
 /* Basic Style */
 .body {
-    background-color: #f8f8f8;
-    color: #333;
-    font-family: Lato, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: Lato, sans-serif;
 }
 
 .header,
 .main {
-    width: 500px;
-    margin: 0 auto;
-    display: block;
-    text-align: right;
+  width: 500px;
+  margin: 0 auto 20px;
+  display: block;
+  text-align: right;
 }
 
 .header__image {
-    width: 100%;
+  width: 100%;
 }
 
 .header__link {
-    font-family: fantasy, cursive;
+  font-family: cursive, fantasy;
+  font-size: 15px;
+  letter-spacing: -0.2px;
 }
 
 @media (max-width:768px) {
 
   .header {
-      text-align: center;
+    text-align: center;
   }
 
 }
@@ -32,142 +34,142 @@
 .section_add,
 .section_todo,
 .section_complete {
-    display: block;
-    width: 500px;
-    margin: 0 auto 0;
-}
-
-.input__task {
-    width: 56%;
-    display: inline-block;
-    flex-grow: 1;
+  text-align: left;
 }
 
 .section__item {
-    display: flex;
+  display: flex;
 }
 
 .section__list {
-    margin: 0;
-    padding: 0px;
+  margin: 0;
+  padding: 0px;
 }
 
 .section__list-row, .section__heading {
-    list-style: none;
+  list-style: none;
 }
 
+/*Inputs and buttons basic style*/
 .input,
 .button {
-    outline: none;
+  outline: none;
+}
+
+.input__task {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.input_text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #dDd;
+  background: #FFF;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+
+.input_text:focus {
+  color: #333;
 }
 
 .button {
-    background: none;
-    border: 0px;
-    color: #888;
-    font-size: 15px;
-    width: 60px;
-    font-family: Lato, sans-serif;
-    cursor: pointer;
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
 }
 
 .button:hover {
-    color: #3a3A3a;
+  color: #3a3A3a;
+}
+
+.button__image {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
+}
+
+.button__image:hover {
+  transform: rotateZ(0);
 }
 
 /* Heading */
 .section__heading {
-    color: #333;
-    font-weight: 700;
-    font-size: 15px;
-    border-bottom: 2px solid #333;
-    padding: 30px 0 10px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.input_text {
-    margin: 0;
-    font-size: 18px;
-    line-height: 18px;
-    height: 21px;
-    padding: 0 9px;
-    border: 1px solid #dDd;
-    background: #FFF;
-    border-radius: 6px;
-    font-family: Lato, sans-serif;
-    color: #888;
-}
-
-.input_text:focus {
-    color: #333;
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 /* New Task */
 .input__task-label {
-    display: block;
-    margin: 0 0 20px;
+  display: block;
 }
 
-.input .input__task_add {
-    width: 318px;
+.input__task_add {
+  width: 318px;
+  margin: 20px 0 17px 0;
+  display: inline-block;
 }
 
 /* Task list */
 .section__list-row {
-    overflow: hidden;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.section__list-row > * {
-    vertical-align: middle;
+.section__list {
+  vertical-align: middle;
 }
 
-.section__list-row > .input_checkbox {
-    margin: 0 10px;
+.input_checkbox {
+  margin: 0 10px;
 }
 
-.section__list-row > .input__task-label {
-    padding-left: 10px;
-    box-sizing: border-box;
-    font-size: 18px;
-    width: 226px;
+.input__task-label {
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  width: 226px;
 }
 
-.section__list-row > .input_text {
-    width: 226px;
-}
-
-.button__image {
-    height: 2em;
-    transform: rotateZ(45deg);
-    transition: transform 200ms ease-in;
-}
-
-.button__image:hover {
-    transform: rotateZ(0);
+.input_text {
+  width: 226px;
 }
 
 /* Completed */
-.section__list .input__task-label {
-    text-decoration: line-through;
-    color: #888;
+#completed-tasks .input__task-label {
+  text-decoration: line-through;
+  color: #888;
 }
 
 /* Edit Task */
-.section__list .section__list-row .input_text {
-    display: none;
+.input_text {
+  display: none;
 }
 
-.section__list .section__list-row .input_text {
-    display: inline-block;
-    width: 224px;
+.edit-mode .input_text {
+  display: inline-block;
+  width: 224px;
 }
 
-.section__list .section__list-row .input__task-label {
-    display: none;
+.edit-mode .input__task-label {
+  display: none;
 }
